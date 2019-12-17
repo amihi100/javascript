@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="number" id="inp1"><button id="btn1">geuss the number</button>
+<span id = "here"></span>
+
+<script>
+var random_number = Math.floor((Math.random() * 10000)+1);
+var counter = 0;
+
+$("#btn1").click(function(){
+	var value = $("#inp1").val();
+	if(value > random_number)
+	{
+		alert("lower");
+		console.log("lower");
+		counter++;
+		}else if (value<random_number)
+		{
+		alert("bigger");
+		console.log("bigger");
+		counter++;
+		}else {
+		alert("well done! number of tries: " + counter);
+			console.log("well done! number of tries: " + counter);
+		}
+	
+});	
+		
+	
+</script>
+</body>
+</html>
